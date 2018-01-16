@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<title>Funerales Renacimiento</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="css/w3.css"> 
+ 
+  <link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps" rel="stylesheet">
+ 
+ <head>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider();
+        
+    });
+  </script>
+ </head>
+ 
+ <style>
+     
+  
+     .centro{
+        
+           padding-right: 80px;
+     }
+     
+      h1 {font-family: 'Macondo Swash Caps', cursive;}
+     
+     body{
+         position: relative;
+         z-index: 1;
+         
+         
+     }
+     .said{
+         background-color:  #01635e;
+         color: white;
+     }
+     
+     .bg{
+         position: fixed;
+         background-image: url(img/banner.jpg);
+     }
+     
+     
+     .atras{
+         position: fixed;
+         z-index: -1;
+         
+     }
+     
+        /* Boton inicio */
+#boton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#boton:hover {
+  background-color: #555;
+}
+    
+    /* Btn Frente */
+    .btnfrente {
+    position: fixed;
+   top: 0px;
+    right: 0px;
+    z-index: +1;
+}
+
+    </style>
+
+<body>
+
+  
+<i class="fa fa-arrow-up w3-" onclick="topFunction()" id="boton" title="Go to top"></i>
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block said w3-card-2 w3-animate-left w3-xlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-text-white">Cerrar
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="index.html" class="w3-bar-item w3-button">Inicio</a>
+  <a href="mision.html" class="w3-bar-item w3-button">Mision</a>
+  <a href="beneficios.html" class="w3-bar-item w3-button">Beneficios</a>
+  <a href="servicios.html" class="w3-bar-item w3-button">Servicios</a>
+  <a href="ubicacion.html" class="w3-bar-item w3-button">Ubicacion</a>
+  <a href="testimonios.html" class="w3-bar-item w3-button">Testimonios</a>
+  <a href="proceso.html" class="w3-bar-item w3-button">Proceso</a>
+</nav>
+
+
+
+<!-- Sidebar/menu -->
+<nav id="div1" class="w3-sidebar said w3-collapse w3-top w3-medium w3-padding" style="z-index:3;width:250px;"><br>
+  <div class="w3-container w3-animate-top">
+   <img src="img/logo/marb.png" alt="b" height="150" width="150">
+    <h3 class="w3-padding-16"></h3>
+  </div>
+  <div class="w3-bar-block w3-animate-zoom">
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-home"></i> Inicio</a> 
+    <a href="#qs" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-question"></i> ¿Quienes somos?</a> 
+    <a href="#of" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-cubes"></i> ¿Que ofrecemos?</a> 
+    <a href="mision.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-handshake-o"></i> Nuestra mision</a>
+    <a href="beneficios.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-smile-o"></i> Beneficios</a> 
+    <a href="servicios.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-suitcase"></i> Servicios</a> 
+    <a href="ubicacion.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-map-marker"></i> Ubicacion</a>
+     <a href="testimonios.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-quote-right"></i> Testimonios</a>
+       <a href="proceso.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-arrows"></i> Proceso</a>
+  </div>
+</nav>
+
+
+
+
+
+  <!-- Navbar on small screens -->
+  
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Proceso</a>
+    <a href="#work" class="w3-bar-item w3-button">Productos</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Formas de Pago</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contacto</a>
+  </div>
+
+<!-- Side -->
+<div class="w3-main" style="margin-left:250px;margin-right:0px">
+
+
+<!-- Image Header -->
+<!-- Celular -->
+<div class="w3-display-container w3-hide-large">
+  <img src="img/bannercel.jpg" alt="boat" style="width:100% ">
+    <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+  <h1 class="w3-text-white"></h1>
+   <button id="fade" class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white w3-hide-small w3-hide-medium"><i class="fa fa-bars"></i></button>
+   <button onclick="w3_open()"class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white w3-hide-large"><i class="fa fa-bars"></i></button>
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white" title="ordena"><i class="fa fa-info"></i></button>
+  </div>
+  </div>
+  
+  
+  <!-- PC -->
+  <div class="w3-display-container w3-animate-opacity w3-hide-small w3-hide-medium">
+  <img src="img/ban2.png" alt="pc" style="width:100% ">
+  
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+  <h1 class="w3-text-white"></h1>
+   
+   <button onclick="w3_open()"class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white w3-hide-large"><i class="fa fa-bars"></i></button>
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white" title="ordena"><i class="fa fa-info"></i></button>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-blue-gray w3-display-container"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-blue-gray w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>DATOS DE CONTACTO PARA INFORMACION:</h4>
+    </header>
+    <div class="w3-container">
+      <p>TELEFONOS: </p>
+      <p><i class="fa fa-volume-control-phone"></i> 01-81-25-26-59-76</p>
+      <p><i class="fa fa fa-envelope"></i> info@funeralesrenacimiento.com</p>
+    </div>
+    <footer class="w3-container w3-blue-gray">
+      <p>¡GRACIAS POR TU PREFERENCIA!</p>
+    </footer>
+  </div>
+</div>
+
+
+<!-- Info -->
+<div id="qs" class="w3-container w3-padding-64 w3-theme-l5 w3-blue-gray w3-text-white" id="contact">
+  <div class="w3-row">
+    <div class="w3-center w3-large w3-bottombar">
+    <div class="w3-padding-16"><h1><i class="fa fa-plus"></i><span class="w3-bottombar">Sobre la Empresa </span><i class="fa fa-plus"></i></h1></div>
+    <p>Somos una empresa dedicada a ofrecerle el mejor servicio para sus familiares y que entiende el sentir en ese momento tan dificil, somos expertos en servicios funerarios, contamos con gente capacitada para asegurar que el servicio sea el mas optimo, su familiar se encuentra en buenas manos tengalo por seguro.</p>
+  
+    </div>
+    </div>
+  </div>
+
+
+
+<!-- pedido Container -->
+<div id="of" class="w3-container w3-padding-64 w3-center" id="team">
+    <h1> <span class="w3-bottombar">¿Que Ofrecemos?</span></h1>
+<p>Ofrecemos servicios funerarios especializados para poder ofrecerle el mejor servicio en esos momentos tan dificiles y asegurarnos que pueda su familiar ser despedido con la mayor tranquilidad. <br><br>
+Le damos la garantia por escrito del servicio aun cuando en nuestras instalaciones no sea posible por la causa que fuera. <br><br>
+Pondriamos a su disposición una casa funeraria con las caracteristicas iguales o mejores de su compra en toda la Republica Mexicana.</p>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="img/b2.jpg" style="width:100%">
+  <img class="mySlides" src="img/b3.jpg" style="width:100%">
+  <img class="mySlides" src="img/b4.jpg" style="width:100%">
+  <img class="mySlides" src="img/b5.jpg" style="width:100%">
+
+  <button class="w3-button w3-white w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-white w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+</div>
+
+
+
+
+
+<!--
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+ <img src="img/as.jpg" alt="be" style="width:45%" class="w3-circle w3-hover-opacity"><br>
+  <img src="img/check.png" alt="be" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3><i class="fa fa-arrow-right"></i></h3>
+  <p>Lorem ipsum dolor sit.</p>
+</div>
+
+
+<div class="w3-quarter">
+ <img src="img/asasa.jpg" alt="be" style="width:45%" class="w3-circle w3-hover-opacity"><br>
+  <img src="img/check.png" alt="be" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3><i class="fa fa-arrow-right"></i></h3>
+  <p>Lorem ipsum dolor sit.</p>
+</div>
+
+<div class="w3-quarter">
+ <img src="img/i1.jpg" alt="be" style="width:45%" class="w3-circle w3-hover-opacity"><br>
+  <img src="img/check.png" alt="be" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3><i class="fa fa-arrow-right"></i></h3>
+  <p>Lorem ipsum dolor sit.</p>
+</div>
+
+<div class="w3-quarter">
+ <img src="img/p4.png" alt="be" style="width:45%" class="w3-circle w3-hover-opacity"><br>
+  <img src="img/check.png" alt="be" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3><i class="fa fa-arrow-right"></i></h3>
+  <p>Lorem ipsum dolor sit.</p>
+</div>
+
+</div> -->
+
+
+
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-blue-gray"
+  style="position:absolute;top:-28px;right:24px">+</a>
+</div>
+
+
+<div class="w3-container w3-blue-gray w3-padding-32 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class=" w3-large">
+    <div class=" w3-center"><h2><span class="w3-bottombar">¡SOMOS TU MEJOR OPCIÓN!</span></h2></div>
+  <br>
+
+    </div>
+    </div>
+  </div>
+
+ <div class="w3-container w3-center w3-teal">
+        <p>Funerales Renacimiento es una marca de CR & Asociados, Todos los derechos reservados <a href="funeralesrenacimiento.com" target="_blank">www.funeralesrenacimiento.com</a></p>
+      
+  </div>
+
+    </div>
+
+<script>
+// Script for side navigation
+function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "300px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("boton").style.display = "block";
+    } else {
+        document.getElementById("boton").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+    
+    
+    
+       $(document).ready(function(){
+        $("#fade").click(function(){
+        $("#div1").fadeToggle();
+   });
+});
+</script>
+
+
+<script>
+    // Slider
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+<title>Funerales Renacimiento</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="css/w3.css"> 
+ 
+ <link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps" rel="stylesheet">
+ 
+ <style>
+     
+     h1 {font-family: 'Macondo Swash Caps', cursive;}
+     
+        .said{
+         background-color:  #01635e;   
+        color: white;
+     }
+     
+     .bronze{
+         background-color: #993300;
+         color: white;
+     }
+     
+     .plata{
+        background-color: #a0a0a0;
+        color: white;
+         
+     }
+     
+     .oro{
+        background-color: #e6c400;
+        color: white;
+         
+     }
+     
+        /* Boton inicio */
+#boton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#boton:hover {
+  background-color: #555;
+}
+    
+    /* Btn Frente */
+    .btnfrente {
+    position: fixed;
+   top: 0px;
+    right: 0px;
+    z-index: +1;
+}
+
+    </style>
+
+<body>
+
+  
+<i class="fa fa-arrow-up w3-" onclick="topFunction()" id="boton" title="Go to top"></i>
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block said w3-card-2 w3-animate-left w3-xlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-text-white">Cerrar
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="index.html" class="w3-bar-item w3-button">Inicio</a>
+  <a href="mision.html" class="w3-bar-item w3-button">Mision</a>
+  <a href="beneficios.html" class="w3-bar-item w3-button">Beneficios</a>
+  <a href="servicios.html" class="w3-bar-item w3-button">Servicios</a>
+  <a href="ubicacion.html" class="w3-bar-item w3-button">Ubicacion</a>
+  <a href="testimonios.html" class="w3-bar-item w3-button">Testimonios</a>
+  <a href="proceso.html" class="w3-bar-item w3-button">Proceso</a>
+</nav>
+
+
+<!-- Sidebar/menu -->
+<nav id="div1" class="w3-sidebar said w3-collapse w3-top w3-medium w3-padding" style="z-index:3;width:250px;"><br>
+  <div class="w3-container">
+   <img src="img/logo/marb.png" alt="b" height="150" width="150">
+    <h3 class="w3-padding-16"></h3>
+  </div>
+  <div class="w3-bar-block w3-animate-opacity">
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-home"></i> Inicio</a> 
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-question"></i> ¿Quienes somos?</a> 
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-cubes"></i> ¿Que ofrecemos?</a> 
+    <a href="mision.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-handshake-o"></i> Nuestra mision</a>
+    <a href="beneficios.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-smile-o"></i> Beneficios</a> 
+    <a href="servicios.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-suitcase"></i> Servicios</a> 
+    <a href="ubicacion.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-map-marker"></i> Ubicacion</a>
+     <a href="testimonios.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-quote-right"></i> Testimonios</a>
+       <a href="proceso.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-arrows"></i> Proceso</a>
+  </div>
+</nav>
+
+
+
+
+
+  <!-- Navbar on small screens -->
+  
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Proceso</a>
+    <a href="#work" class="w3-bar-item w3-button">Productos</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Formas de Pago</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contacto</a>
+  </div>
+
+<!-- Side -->
+<div class="w3-main" style="margin-left:250px;margin-right:0px">
+
+
+<!-- Image Header -->
+<!-- Celular -->
+<div class="w3-display-container w3-hide-large">
+  <img src="img/bannercel.jpg" alt="boat" style="width:100% ">
+    <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+  <h1 class="w3-text-white"></h1>
+   <button id="fade" class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white w3-hide-small w3-hide-medium"><i class="fa fa-bars"></i></button>
+   <button onclick="w3_open()"class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white w3-hide-large"><i class="fa fa-bars"></i></button>
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white" title="ordena"><i class="fa fa-info"></i></button>
+  </div>
+  </div>
+
+  <div class="w3-display-container w3-animate-opacity w3-hide-small w3-hide-medium">
+  <img src="img/ban2.png" alt="pc" style="width:100% ">
+  
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+  <h1 class="w3-text-white"></h1>
+   
+   <button onclick="w3_open()"class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white w3-hide-large"><i class="fa fa-bars"></i></button>
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white" title="ordena"><i class="fa fa-info"></i></button>
+  </div>
+</div>
+
+<!-- contacto info -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-blue-gray w3-display-container"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-blue-gray w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>DATOS DE CONTACTO PARA INFORMACION:</h4>
+    </header>
+    <div class="w3-container">
+      <p>TELEFONOS: </p>
+      <p><i class="fa fa-volume-control-phone"></i> 00-000-000-000</p>
+      <p><i class="fa fa fa-envelope"></i> info@funeralesrenacimiento.com</p>
+    </div>
+
+    <footer class="w3-container w3-blue-gray">
+      <p>¡GRACIAS POR TU PREFERENCIA!</p>
+    </footer>
+  </div>
+</div>
+
+<!-- INFO BRONCE -->
+    <!-- BRONCE 1 -->
+<div id="id02" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+    <header class="w3-container bronze w3-display-container"> 
+      <span onclick="document.getElementById('id02').style.display='none'" class="w3-button bronze w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h1 class="w3-center">BRONCE: Servicio Funeral Basico</h1>
+    </header>
+
+     
+     
+    <div class="w3-container">
+            <div class="w3-left">
+   <img src="img/L.png" alt="bronze" width="150px" height="248px">
+     </div>
+      <ul class="w3-right">
+       
+      <p >INCLUYE: </p>
+<li>Asesoría  profesional. </li>
+<li>Gestoría del funeral.</li>
+<li>Director de Servicios. </li>
+<li>Traslado local.</li>
+<li>Embalsamamiento y preparación estética.</li>
+<li>Ataúd Metálico básico. </li>
+<li>Capillas de velación (24 horas) </li>
+<li>Traslado de flores. </li>
+<li>Carroza al Parque Funeral. </li>
+<li>Cafetería Ilimitada.(agua y cafe negro c/sust. de azucar y leche). </li>
+</ul>
+    </div>
+   
+
+    <footer class="w3-container bronze w3-padding-16 w3-center">
+
+      <a href="pagos/bronze/sfb/index.html"><button class="w3-center w3-button w3-white">COMPRAR ESTE SERVICIO</button></a>
+    </footer>
+  </div>
+</div>
+
+
+<!-- BRONCE 2 -->
+ <div id="id02_2" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+    <header class="w3-container bronze w3-display-container"> 
+      <span onclick="document.getElementById('id02_2').style.display='none'" class="w3-button bronze w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h1 class="w3-center">BRONCE: SFB + Gastos de Inhumacion</h1>
+    </header>
+
+     
+     
+    <div class="w3-container">
+            <div class="w3-left">
+   <img src="img/paq/b/bi.jpg" alt="bronze" width="320px" height="248px">
+     </div>
+      <ul class="w3-right">
+       
+      <p >INCLUYE: </p>
+<li>Asesoría  profesional. </li>
+<li>Gestoría del funeral.</li>
+<li>Director de Servicios. </li>
+<li>Traslado local.</li>
+<li>Embalsamamiento y preparación estética.</li>
+<li>Ataúd Metálico básico. </li>
+<li>Capillas de velación (24 horas) </li>
+<li>Traslado de flores. </li>
+<li>Carroza al Parque Funeral. </li>
+<li>Cafetería Ilimitada.(agua y cafe negro c/sust. de azucar y leche). </li>
+</ul>
+    </div>
+   
+
+    <footer class="w3-container bronze w3-padding-16 w3-center">
+      <a href="pagos/bronze/sfbi/index.html"><button class="w3-center w3-button w3-white">IHUMACION C/ CEMENTERIO</button></a>
+      <a href="pagos/bronze/sfbit/index.html"><button class="w3-center w3-button w3-white">IHUMACION TRADICIONAL</button></a>
+    </footer>
+  </div>
+</div>   
+    
+    
+    <!-- BRONCE 3 -->
+ <div id="id02_3" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+    <header class="w3-container bronze w3-display-container"> 
+      <span onclick="document.getElementById('id02_3').style.display='none'" class="w3-button bronze w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h1 class="w3-center">BRONCE: SFB + Gastos de Cremacion</h1>
+    </header>
+
+     
+     
+    <div class="w3-container">
+            <div class="w3-left">
+     <img src="img/paq/b/bc.jpg" alt="bronze" width="320px" height="248px">
+     </div>
+      <ul class="w3-right">
+       
+      <p >INCLUYE: </p>
+<li>Asesoría  profesional. </li>
+<li>Gestoría del funeral.</li>
+<li>Director de Servicios. </li>
+<li>Traslado local.</li>
+<li>Embalsamamiento y preparación estética.</li>
+<li>Ataúd Metálico básico. </li>
+<li>Capillas de velación (24 horas) </li>
+<li>Traslado de flores. </li>
+<li>Carroza al Parque Funeral. </li>
+<li>Cafetería Ilimitada.(agua y cafe negro c/sust. de azucar y leche). </li>
+</ul>
+    </div>
+   
+
+    <footer class="w3-container bronze w3-padding-16 w3-center">
+      <a href="pagos/bronze/sfbc/index.html"><button class="w3-center w3-button w3-white">COMPRAR ESTE SERVICIO</button></a>
+    </footer>
+  </div>
+</div>   
+    
+    
+<!-- INFO PLATA -->    
+    <!-- PLATA 1 --> 
+<div id="id03" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+    <header class="w3-container plata w3-display-container"> 
+      <span onclick="document.getElementById('id03').style.display='none'" class="w3-button plata w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h1 class="w3-center">PLATA: Servicio Funeral Basico</h1>
+    </header>
+    <div class="w3-container">
+     <div class="w3-left">
+   <img src="img/WING.png" alt="plata" width="300px" height="248px">
+     </div>
+      <ul class="w3-right">
+      <p>INCLUYE: </p>
+      <li>Asesoría  profesional. </li>
+<li>Gestoría del funeral.</li>
+<li>Director de Servicios. </li>
+<li>Traslado local.</li>
+<li>Embalsamamiento y preparación estética.</li>
+<li>Ataúd Metálico básico. </li>
+<li>Capillas de velación (24 horas) </li>
+<li>Traslado de flores. </li>
+<li>Carroza al Parque Funeral. </li>
+<li>Cafetería Ilimitada. </li>
+<h1>+</h1>
+<li>Incluye cirios, catafalco, atril y arreglo sobre ataud. </li>
+<li>Cafeteria incluye galletas. </li>
+<li>Seguro de vida por $100,000 pesos. </li>
+
+</ul>
+    </div>
+
+  <footer class="w3-container plata w3-padding-16 w3-center">
+
+      <a href="pagos/plata/sfb/index.html"><button class="w3-center w3-button w3-white">COMPRAR ESTE SERVICIO</button></a>
+    </footer>
+  </div>
+</div>
+
+    <!-- PLATA 2 --> 
+<div id="id03_2" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+    <header class="w3-container plata w3-display-container"> 
+      <span onclick="document.getElementById('id03_2').style.display='none'" class="w3-button plata w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h1 class="w3-center">PLATA: SFB + Gastos de Inhumacion</h1>
+    </header>
+    <div class="w3-container">
+     <div class="w3-left">
+     <img src="img/paq/p/pi.jpg" alt="plata" width="320px" height="248px">
+     </div>
+      <ul class="w3-right">
+      <p>INCLUYE: </p>
+      <li>Asesoría  profesional. </li>
+<li>Gestoría del funeral.</li>
+<li>Director de Servicios. </li>
+<li>Traslado local.</li>
+<li>Embalsamamiento y preparación estética.</li>
+<li>Ataúd Metálico básico. </li>
+<li>Capillas de velación (24 horas) </li>
+<li>Traslado de flores. </li>
+<li>Carroza al Parque Funeral. </li>
+<li>Cafetería Ilimitada. </li>
+<h1>+</h1>
+<li>Incluye cirios, catafalco, atril y arreglo sobre ataud. </li>
+<li>Cafeteria incluye galletas. </li>
+<li>Seguro de vida por $100,000 pesos. </li>
+
+</ul>
+    </div>
+
+  <footer class="w3-container plata w3-padding-16 w3-center">
+      <a href="pagos/plata/sfbi/index.html"><button class="w3-center w3-button w3-white">IHUMACION C/ CEMENTERIO</button></a>
+      <a href="pagos/plata/sfbit/index.html"><button class="w3-center w3-button w3-white">IHUMACION TRADICIONAL</button></a>
+    </footer>
+  </div>
+</div>   
+    
+    <!-- PLATA 3 --> 
+<div id="id03_3" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+    <header class="w3-container plata w3-display-container"> 
+      <span onclick="document.getElementById('id03_3').style.display='none'" class="w3-button plata w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h1 class="w3-center">PLATA: SFB + Gastos de Cremacion</h1>
+    </header>
+    <div class="w3-container">
+     <div class="w3-left">
+  <img src="img/paq/p/pc.jpg" alt="plata" width="320px" height="248px">
+     </div>
+      <ul class="w3-right">
+      <p>INCLUYE: </p>
+      <li>Asesoría  profesional. </li>
+<li>Gestoría del funeral.</li>
+<li>Director de Servicios. </li>
+<li>Traslado local.</li>
+<li>Embalsamamiento y preparación estética.</li>
+<li>Ataúd Metálico básico. </li>
+<li>Capillas de velación (24 horas) </li>
+<li>Traslado de flores. </li>
+<li>Carroza al Parque Funeral. </li>
+<li>Cafetería Ilimitada. </li>
+<h1>+</h1>
+<li>Incluye cirios, catafalco, atril y arreglo sobre ataud. </li>
+<li>Cafeteria incluye galletas. </li>
+<li>Seguro de vida por $100,000 pesos. </li>
+
+</ul>
+    </div>
+
+  <footer class="w3-container plata w3-padding-16 w3-center">
+      <a href="pagos/plata/sfbc/index.html"><button class="w3-center w3-button w3-white">COMPRAR ESTE SERVICIO</button></a>
+    </footer>
+  </div>
+</div>   
+    
+    
+<!-- INFO ORO -->
+    <!-- ORO 1 -->
+<div id="id04" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+    <header class="w3-container oro w3-display-container"> 
+      <span onclick="document.getElementById('id04').style.display='none'" class="w3-button oro w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h1 class="w3-center">ORO: Servicio Funeral Basico</h1>
+    </header>
+    <div class="w3-container">
+      <div class="w3-left">
+   <img src="img/pro.png" alt="oro" width="300px" height="248px">
+     </div>
+      <ul class="w3-right">
+      <p>INCLUYE: </p>
+      <li>Asesoría  profesional. </li>
+<li>Gestoría del funeral.</li>
+<li>Director de Servicios. </li>
+<li>Traslado local.</li>
+<li>Embalsamamiento y preparación estética.</li>
+<li>Ataúd Metálico básico. </li>
+<li>Capillas de velación (24 horas) </li>
+<li>Traslado de flores. </li>
+<li>Carroza al Parque Funeral. </li>
+<li>Cafetería Ilimitada.</li>
+<h1>+</h1>
+<li>Incluye cirios, catafalco, atril y arreglo sobre ataud. </li>
+<li>Cafeteria incluye galletas.</li>
+<h1>+</h1>
+<li>Seguro de vida por $500,000 pesos.</li>
+<li>2 arreglos florales de cabecera.</li>
+<li>Refrigerio para familiares cercanos.</li>
+<li>Habitacion para descanso tipo Hotel.</li>
+</ul>
+          </div>
+
+     <footer class="w3-container oro w3-padding-16 w3-center">
+
+      <a href="pagos/oro/sfb/index.html"><button class="w3-center w3-button w3-white">COMPRAR ESTE SERVICIO</button></a>
+    </footer>
+  </div>
+</div>
+
+    <!-- ORO 2 -->
+<div id="id04_2" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+    <header class="w3-container oro w3-display-container"> 
+      <span onclick="document.getElementById('id04_2').style.display='none'" class="w3-button oro w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h1 class="w3-center">ORO: SFB + Gastos de Inhumacion</h1>
+    </header>
+    <div class="w3-container">
+      <div class="w3-left">
+   <img src="img/paq/b/bi.jpg" alt="oro" width="300px" height="248px">
+     </div>
+      <ul class="w3-right">
+      <p>INCLUYE: </p>
+      <li>Asesoría  profesional. </li>
+<li>Gestoría del funeral.</li>
+<li>Director de Servicios. </li>
+<li>Traslado local.</li>
+<li>Embalsamamiento y preparación estética.</li>
+<li>Ataúd Metálico básico. </li>
+<li>Capillas de velación (24 horas) </li>
+<li>Traslado de flores. </li>
+<li>Carroza al Parque Funeral. </li>
+<li>Cafetería Ilimitada.</li>
+<h1>+</h1>
+<li>Incluye cirios, catafalco, atril y arreglo sobre ataud. </li>
+<li>Cafeteria incluye galletas.</li>
+<h1>+</h1>
+<li>Seguro de vida por $500,000 pesos.</li>
+<li>2 arreglos florales de cabecera.</li>
+<li>Refrigerio para familiares cercanos.</li>
+<li>Habitacion para descanso tipo Hotel.</li>
+</ul>
+          </div>
+
+     <footer class="w3-container oro w3-padding-16 w3-center">
+       <a href="pagos/oro/sfbi/index.html"><button class="w3-center w3-button w3-white">IHUMACION C/ CEMENTERIO</button></a>
+      <a href="pagos/oro/sfbit/index.html"><button class="w3-center w3-button w3-white">IHUMACION TRADICIONAL</button></a>
+    </footer>
+  </div>
+</div>
+
+    <!-- ORO 3 -->
+<div id="id04_3" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+    <header class="w3-container oro w3-display-container"> 
+      <span onclick="document.getElementById('id04_3').style.display='none'" class="w3-button oro w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h1 class="w3-center">ORO: SFB + Gastos de Cremacion</h1>
+    </header>
+    <div class="w3-container">
+      <div class="w3-left">
+   <img src="img/paq/o/oc.jpg" alt="oro" width="300px" height="248px">
+     </div>
+      <ul class="w3-right">
+      <p>INCLUYE: </p>
+      <li>Asesoría  profesional. </li>
+<li>Gestoría del funeral.</li>
+<li>Director de Servicios. </li>
+<li>Traslado local.</li>
+<li>Embalsamamiento y preparación estética.</li>
+<li>Ataúd Metálico básico. </li>
+<li>Capillas de velación (24 horas) </li>
+<li>Traslado de flores. </li>
+<li>Carroza al Parque Funeral. </li>
+<li>Cafetería Ilimitada.</li>
+<h1>+</h1>
+<li>Incluye cirios, catafalco, atril y arreglo sobre ataud. </li>
+<li>Cafeteria incluye galletas.</li>
+<h1>+</h1>
+<li>Seguro de vida por $500,000 pesos.</li>
+<li>2 arreglos florales de cabecera.</li>
+<li>Refrigerio para familiares cercanos.</li>
+<li>Habitacion para descanso tipo Hotel.</li>
+</ul>
+          </div>
+
+     <footer class="w3-container oro w3-padding-16 w3-center">
+      <a href="pagos/oro/sfbc/index.html"><button class="w3-center w3-button w3-white">COMPRAR ESTE SERVICIO</button></a>
+    </footer>
+  </div>
+</div>
+
+       <!-- Platino 1 -->
+<div id="id06" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+    <header class="w3-container w3-light-gray w3-display-container"> 
+      <span onclick="document.getElementById('id06').style.display='none'" class="w3-button w3-light-gray w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h1 class="w3-center">PLATINO: Servicio Funeral Basico</h1>
+    </header>
+    <div class="w3-container">
+      <div class="w3-left">
+   <img src="img/plat.png" alt="oro" width="300px" height="248px">
+     </div>
+      <ul class="w3-right">
+      <p>INCLUYE: </p>
+      <li>Asesoría  profesional. </li>
+<li>Gestoría del funeral.</li>
+<li>Director de Servicios. </li>
+<li>Traslado local.</li>
+<li>Embalsamamiento y preparación estética.</li>
+<li>Ataúd Metálico básico. </li>
+<li>Capillas de velación (24 horas) </li>
+<li>Traslado de flores. </li>
+<li>Carroza al Parque Funeral. </li>
+<li>Cafetería Ilimitada.</li>
+<h1>+</h1>
+<li>Incluye cirios, catafalco, atril y arreglo sobre ataud. </li>
+<li>Cafeteria incluye galletas.</li>
+<h1>+</h1>
+<li>Seguro de vida por $500,000 pesos.</li>
+<li>2 arreglos florales de cabecera.</li>
+<li>Refrigerio para familiares cercanos.</li>
+<li>Habitacion para descanso tipo Hotel.</li>
+</ul>
+          </div>
+
+    
+     <footer class="w3-container w3-light-gray w3-padding-16 w3-center">
+
+      <a href="pagos/platino/sfb/index.html"><button class="w3-center w3-button w3-white">COMPRAR ESTE SERVICIO</button></a>
+    </footer>
+  </div>
+</div>
+   
+          <!-- Platino 2 -->
+<div id="id06_2" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+    <header class="w3-container w3-light-gray w3-display-container"> 
+      <span onclick="document.getElementById('id06_2').style.display='none'" class="w3-button w3-light-gray w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h1 class="w3-center">PLATINO: Servicio Funeral Basico + Inhumacion</h1>
+    </header>
+    <div class="w3-container">
+      <div class="w3-left">
+   <img src="img/plat.png" alt="oro" width="300px" height="248px">
+     </div>
+      <ul class="w3-right">
+      <p>INCLUYE: </p>
+      <li>Asesoría  profesional. </li>
+<li>Gestoría del funeral.</li>
+<li>Director de Servicios. </li>
+<li>Traslado local.</li>
+<li>Embalsamamiento y preparación estética.</li>
+<li>Ataúd Metálico básico. </li>
+<li>Capillas de velación (24 horas) </li>
+<li>Traslado de flores. </li>
+<li>Carroza al Parque Funeral. </li>
+<li>Cafetería Ilimitada.</li>
+<h1>+</h1>
+<li>Incluye cirios, catafalco, atril y arreglo sobre ataud. </li>
+<li>Cafeteria incluye galletas.</li>
+<h1>+</h1>
+<li>Seguro de vida por $500,000 pesos.</li>
+<li>2 arreglos florales de cabecera.</li>
+<li>Refrigerio para familiares cercanos.</li>
+<li>Habitacion para descanso tipo Hotel.</li>
+</ul>
+          </div>
+
+    
+     <footer class="w3-container w3-light-gray w3-padding-16 w3-center">
+ <a href="pagos/platino/sfbi/index.html"><button class="w3-center w3-button w3-white">IHUMACION C/ CEMENTERIO</button></a>
+      <a href="pagos/platino/sfbit/index.html"><button class="w3-center w3-button w3-white">IHUMACION TRADICIONAL</button></a>
+    </footer>
+  </div>
+</div>
+  
+           <!-- Platino 3 -->
+<div id="id06_3" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+    <header class="w3-container w3-light-gray w3-display-container"> 
+      <span onclick="document.getElementById('id06_3').style.display='none'" class="w3-button w3-light-gray w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h1 class="w3-center">PLATINO: Servicio Funeral Basico + Cremacion</h1>
+    </header>
+    <div class="w3-container">
+      <div class="w3-left">
+   <img src="img/plat.png" alt="oro" width="300px" height="248px">
+     </div>
+      <ul class="w3-right">
+      <p>INCLUYE: </p>
+      <li>Asesoría  profesional. </li>
+<li>Gestoría del funeral.</li>
+<li>Director de Servicios. </li>
+<li>Traslado local.</li>
+<li>Embalsamamiento y preparación estética.</li>
+<li>Ataúd Metálico básico. </li>
+<li>Capillas de velación (24 horas) </li>
+<li>Traslado de flores. </li>
+<li>Carroza al Parque Funeral. </li>
+<li>Cafetería Ilimitada.</li>
+<h1>+</h1>
+<li>Incluye cirios, catafalco, atril y arreglo sobre ataud. </li>
+<li>Cafeteria incluye galletas.</li>
+<h1>+</h1>
+<li>Seguro de vida por $500,000 pesos.</li>
+<li>2 arreglos florales de cabecera.</li>
+<li>Refrigerio para familiares cercanos.</li>
+<li>Habitacion para descanso tipo Hotel.</li>
+</ul>
+          </div>
+
+    
+     <footer class="w3-container w3-light-gray w3-padding-16 w3-center">
+
+      <a href="pagos/platino/sfbc/index.html"><button class="w3-center w3-button w3-white">COMPRAR ESTE SERVICIO</button></a>
+    </footer>
+  </div>
+</div>
+  
+   
+   
+   
+   
+   
+    <!-- CREMACION -->
+<div id="id05" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+    <header class="w3-container w3-black w3-display-container"> 
+      <span onclick="document.getElementById('id05').style.display='none'" class="w3-button w3-black w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h1 class="w3-center">Cremacion Basica Directa</h1>
+    </header>
+    <div class="w3-container">
+      <div class="w3-left w3-padding-16">
+   <img src="img/paq/cre2.jpg" alt="crema" width="300px" height="248px">
+     </div>
+      <ul class="w3-right">
+      <p>INCLUYE: </p>
+      <li>dsdsdsdsdsdsdsdsdsds</li>
+
+</ul>
+          </div>
+
+     <footer class="w3-container w3-black w3-padding-16 w3-center">
+      <a href="pagos/cremacion/index.html"><button class="w3-center w3-button w3-white">COMPRAR ESTE SERVICIO</button></a>
+    </footer>
+  </div>
+</div>
+
+
+<!-- Pricing Row -->
+<div class="w3-row-padding w3-center w3-padding-16 w3-white" id="pricing">
+    <h1><span class="w3-bottombar">SERVICIOS</span></h1>
+    <p>Contamos con diferentes paquetes para cualquier necesidad</p><br>
+    <div class="w3-quarter w3-margin-bottom w3-animate-left">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme-l2 w3-white">
+        <img src="img/L.png" alt="basico" style="width:22%" class="w3-circle w3-hover-opacity"><p class="w3-large">Bronze</p>
+        </li>
+       <!--  <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 20,000 </h2>
+          <span class="w3-opacity">+ IVA</span>
+        </li> -->
+        <li class="w3-theme-l5 w3-padding-24">
+          <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-blue-gray w3-padding-medium"> Servicio Funeral Basico</button></li>
+          <li class="w3-theme-l5 w3-padding-24">
+              <button onclick="document.getElementById('id02_2').style.display='block'" class="w3-button w3-blue-gray w3-padding-medium"> SFB + Gastos inhumacion</button></li>
+           <li class="w3-theme-l5 w3-padding-24">
+            <button onclick="document.getElementById('id02_3').style.display='block'" class="w3-button w3-blue-gray w3-padding-medium"> SFB + Gastos  cremacion</button></li>
+      </ul>
+    </div>
+
+    <div class="w3-quarter w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow w3-animate-bottom">
+        <li class="w3-theme-l2 w3-white">
+          <img src="img/WING.png" alt="basico" style="width:45%" class="w3-circle w3-hover-opacity"><p class="w3-large">Plata</p>
+        </li>
+        <!-- <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 28,000</h2>
+          <span class="w3-opacity">+ IVA</span>
+        </li> -->
+        <li class="w3-theme-l5 w3-padding-24">
+          <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-blue-gray w3-padding-medium">Servicio Funeral Basico</button></li>
+            <li class="w3-theme-l5 w3-padding-24">
+                <button onclick="document.getElementById('id03_2').style.display='block'" class="w3-button w3-blue-gray w3-padding-medium"> SFB + Gastos inhumacion</button></li>
+               <li class="w3-theme-l5 w3-padding-24">
+                   <button onclick="document.getElementById('id03_3').style.display='block'" class="w3-button w3-blue-gray w3-padding-medium"> SFB + Gastos cremacion</button></li>
+      </ul>
+    </div>
+    
+        <div class="w3-quarter w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow w3-animate-right">
+        <li class="w3-theme-l2 w3-white">
+          <img src="img/pro.png" alt="basico" style="width:45%" class="w3-circle w3-hover-opacity"><p class="w3-large">Oro</p>
+        </li>
+        <!-- <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 35,000</h2>
+          <span class="w3-opacity">+ IVA</span>
+        </li> -->
+        <li class="w3-theme-l5 w3-padding-24">
+            <button onclick="document.getElementById('id04').style.display='block'" class="w3-button w3-blue-gray w3-padding-medium">Servicio Funeral Basico</button></li>
+          <li class="w3-theme-l5 w3-padding-24">
+              <button onclick="document.getElementById('id04_2').style.display='block'" class="w3-button w3-blue-gray w3-padding-medium"> SFB + Gastos inhumacion</button></li>
+          <li class="w3-theme-l5 w3-padding-24">
+          <button onclick="document.getElementById('id04_3').style.display='block'" class="w3-button w3-blue-gray w3-padding-medium"> SFB + Gastos cremacion</button></li>
+      </ul>
+    </div>
+    
+     <div class="w3-quarter w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow w3-animate-right">
+        <li class="w3-theme-l2 w3-white">
+          <img src="img/plat.png" alt="basico" style="width:45%" class="w3-circle w3-hover-opacity"><p class="w3-large">Platino</p>
+        </li>
+        <!-- <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 35,000</h2>
+          <span class="w3-opacity">+ IVA</span>
+        </li> -->
+        <li class="w3-theme-l5 w3-padding-24">
+            <button onclick="document.getElementById('id06').style.display='block'" class="w3-button w3-blue-gray w3-padding-medium">Servicio Funeral Basico</button></li>
+          <li class="w3-theme-l5 w3-padding-24">
+              <button onclick="document.getElementById('id06_2').style.display='block'" class="w3-button w3-blue-gray w3-padding-medium"> SFB + Gastos  inhumacion</button></li>
+          <li class="w3-theme-l5 w3-padding-24">
+          <button onclick="document.getElementById('id06_3').style.display='block'" class="w3-button w3-blue-gray w3-padding-medium"> SFB + Gastos  cremacion</button></li>
+      </ul>
+    </div>
+    
+    
+    
+</div>
+
+
+<div class="w3-row-padding w3-padding-64 w3-white" id="pricing">
+<div class="w3-third">
+<img src="img/cre.jpg" alt="cremacion" width="300px" height="200px">
+</div>
+
+
+<div class="w3-third"> 
+<h2>CREMACION BASICA DIRECTA</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi expedita laboriosam magnam eaque rem! Ex excepturi nemo adipisci aliquid consequatur.</p>
+</div>
+    <div class="w3-third">
+    <br><br><br>
+     <button onclick="document.getElementById('id05').style.display='block'" class="w3-button w3-blue-gray w3-padding-large"> Mas informacion</button>
+</div>
+
+    </div>
+
+<div class="w3-container w3-blue-gray w3-padding-32 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class=" w3-large">
+    <div class=" w3-center"><h2><span class="w3-bottombar">¡SOMOS TU MEJOR OPCIÓN!</span></h2></div>
+  <br>
+
+    </div>
+    </div>
+  </div>
+
+
+
+ <div class="w3-container w3-center w3-teal">
+        <p>Funerales Renacimiento es una marca de CR & Asociados, Todos los derechos reservados <a href="funeralesrenacimiento.com" target="_blank">www.funeralesrenacimiento.com</a></p>
+      
+  </div>
+
+    </div>
+
+<script>
+// Script for side navigation
+function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "300px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("boton").style.display = "block";
+    } else {
+        document.getElementById("boton").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+    
+
+</script>
+
+</body>
+</html>

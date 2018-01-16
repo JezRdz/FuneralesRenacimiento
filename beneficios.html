@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<title>Funerales Renacimiento</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="css/w3.css"> 
+ <head>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps" rel="stylesheet">
+
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider();
+    });
+      
+      
+$(document).ready(function(){
+        $(".fade1").hide();
+    $(".fade1").delay(100).fadeIn(2000);
+    });
+      
+      $(document).ready(function(){
+        $(".fade2").hide();
+    $(".fade2").delay(300).fadeIn(2000);
+    });
+      
+      $(document).ready(function(){
+        $(".fade3").hide();
+    $(".fade3").delay(500).fadeIn(2000);
+    });
+      
+      $(document).ready(function(){
+        $(".fade4").hide();
+    $(".fade4").delay(700).fadeIn(2000);
+    });
+      
+      $(document).ready(function(){
+        $(".fade5").hide();
+    $(".fade5").delay(900).fadeIn(2000);
+    });
+      
+      $(document).ready(function(){
+        $(".fade6").hide();
+    $(".fade6").delay(1100).fadeIn(2000);
+    });
+      
+        $(document).ready(function(){
+        $(".fade7").hide();
+    $(".fade7").delay(1300).fadeIn(2000);
+    });
+      
+        $(document).ready(function(){
+        $(".fade8").hide();
+    $(".fade8").delay(1500).fadeIn(2000);
+    });
+
+  </script>
+ </head>
+ 
+ <style>
+     
+     h1 {font-family: 'Macondo Swash Caps', cursive;}
+     
+        .said{
+         background-color:  #01635e;   
+        color: white;
+     }
+     
+     
+        /* Boton inicio */
+#boton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#boton:hover {
+  background-color: #555;
+}
+    
+    /* Btn Frente */
+    .btnfrente {
+    position: fixed;
+   top: 0px;
+    right: 0px;
+    z-index: +1;
+}
+
+  .square { 
+    border: 2px solid black;
+    text-align: center;
+    width: 200px;
+      height: 200px;
+      
+  }
+
+  .square:after {
+    content: "";
+    padding-bottom: 100%;
+  }
+
+  .content {   
+    font-size: 15px;
+    padding-top: 20%;
+  }
+     
+
+
+    </style>
+
+<body>
+
+  
+<i class="fa fa-arrow-up w3-" onclick="topFunction()" id="boton" title="Go to top"></i>
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block said w3-card-2 w3-animate-left w3-xlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-text-white">Cerrar
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="index.html" class="w3-bar-item w3-button">Inicio</a>
+  <a href="mision.html" class="w3-bar-item w3-button">Mision</a>
+  <a href="beneficios.html" class="w3-bar-item w3-button">Beneficios</a>
+  <a href="servicios.html" class="w3-bar-item w3-button">Servicios</a>
+  <a href="ubicacion.html" class="w3-bar-item w3-button">Ubicacion</a>
+  <a href="testimonios.html" class="w3-bar-item w3-button">Testimonios</a>
+  <a href="proceso.html" class="w3-bar-item w3-button">Proceso</a>
+</nav>
+
+
+<!-- Sidebar/menu -->
+<nav id="div1" class="w3-sidebar said w3-collapse w3-top w3-medium w3-padding" style="z-index:3;width:250px;"><br>
+  <div class="w3-container">
+   <img src="img/logo/marb.png" alt="b" height="150" width="150">
+    <h3 class="w3-padding-16"></h3>
+  </div>
+  <div class="w3-bar-block w3-animate-opacity">
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-home"></i> Inicio</a> 
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-question"></i> ¿Quienes somos?</a> 
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-cubes"></i> ¿Que ofrecemos?</a> 
+    <a href="mision.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-handshake-o"></i> Nuestra mision</a>
+    <a href="beneficios.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-smile-o"></i> Beneficios</a> 
+    <a href="servicios.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-suitcase"></i> Servicios</a> 
+    <a href="ubicacion.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-map-marker"></i> Ubicacion</a>
+     <a href="testimonios.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-quote-right"></i> Testimonios</a>
+       <a href="proceso.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-arrows"></i> Proceso</a>
+  </div>
+</nav>
+
+
+
+
+
+
+  <!-- Navbar on small screens -->
+  
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Proceso</a>
+    <a href="#work" class="w3-bar-item w3-button">Productos</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Formas de Pago</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contacto</a>
+  </div>
+
+<!-- Side -->
+<div class="w3-main" style="margin-left:250px;margin-right:0px">
+
+
+<!-- Image Header -->
+
+<!-- Celular -->
+<div class="w3-display-container w3-hide-large">
+  <img src="img/bannercel.jpg" alt="boat" style="width:100% ">
+    <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+  <h1 class="w3-text-white"></h1>
+   <button id="fade" class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white w3-hide-small w3-hide-medium"><i class="fa fa-bars"></i></button>
+   <button onclick="w3_open()"class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white w3-hide-large"><i class="fa fa-bars"></i></button>
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white" title="ordena"><i class="fa fa-info"></i></button>
+  </div>
+  </div>
+
+  <div class="w3-display-container w3-animate-opacity w3-hide-small w3-hide-medium">
+  <img src="img/ban2.png" alt="pc" style="width:100% ">
+  
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+  <h1 class="w3-text-white"></h1>
+   
+   <button onclick="w3_open()"class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white w3-hide-large"><i class="fa fa-bars"></i></button>
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-blue-gray w3-text-white w3-button w3-xlarge w3-theme w3-hover-white" title="ordena"><i class="fa fa-info"></i></button>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-blue-gray w3-display-container"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-blue-gray w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>DATOS DE CONTACTO PARA INFORMACION:</h4>
+    </header>
+    <div class="w3-container">
+      <p>TELEFONOS: </p>
+      <p><i class="fa fa-volume-control-phone"></i> 01-81-25-26-59-76</p>
+      <p><i class="fa fa fa-envelope"></i> info@funeralesrenacimiento.com</p>
+    </div>
+    <footer class="w3-container w3-blue-gray">
+      <p>¡GRACIAS POR TU PREFERENCIA!</p>
+    </footer>
+  </div>
+</div>
+
+<div class="w3-container">
+   <h1 class="w3-center w3-padding-16"><span class="w3-bottombar"> BENEFICIOS </span> </h1>
+   <p>Te ofrecemos precios especiales con nuestra red de Agremiados en: Servicios adicionales de Capillas, Panteones o Cementerios, Servicios Funerarios  y Bonos a nuestros clientes como recompensa a su lealtad, con cobertura en toda la República Mexicana a través de nuestras empresas afiliadas y que como nosotros tienen un compromiso de alta calidad en servicio.
+</p>
+</div>
+  
+
+<div class="w3-row-padding w3-padding-32">
+  <div class="w3-col s2 l3 m3 fade1 w3-mobile square content" >
+      <p>Servicio</p>
+      <hr>
+      <img src="img/iconos/ic1.png" alt="Avatar" class="w3-left w3-margin-right" style="width:60px">
+      <p>Trato profesional en esos momentos tan dificiles </p>
+   
+  </div>
+
+    
+  <div class="w3-col s2 l3 m3 fade2 w3-mobile square content w3-teal">
+ 
+      <p>Seguridad</p>
+      <hr>
+      <img src="img/iconos/ic2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+      <p>Garantizar el servicio a nivel nacional.</p><br>
+    
+  </div>
+
+    
+  <div class="w3-col s2 l3 m3 fade3 w3-mobile square content">
+    
+      <p>Respaldo</p>
+      <hr>
+      <img src="img/iconos/ic3.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+      <p>Respaldo por un seguro de saldos insolutos.</p><br>
+    
+  </div>
+  
+    <div class="w3-col s2 l3 m3 fade4 w3-mobile square content w3-teal"  >
+   
+      <p>Calidad</p>
+      <hr>
+      <img src="img/iconos/ic4.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+      <p>Instalaciones de primer nivel.</p><br>
+   
+  </div>
+  
+</div>
+      
+    <div class="w3-row-padding w3-padding-16 ">
+  <div class="w3-col s2 l3 m3 fade5 w3-mobile square content w3-teal">
+   
+       <p>Proteccion</p>
+      <hr>
+      <img src="img/iconos/ic5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+      <p>Cobijando a sus beneficiarios con un seguro de vida.</p><br>
+  
+  </div>
+
+    
+  <div class="w3-col s2 l3 m3 fade6 w3-mobile square content ">
+ 
+       <p>Tranquilidad</p>
+      <hr>
+      <img src="img/iconos/ic6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right " style="width:60px">
+      <p>Resolviendo optimamente en tiempo y forma.</p><br>
+   
+  </div>
+
+    
+  <div class="w3-col s2 l3 m3 fade7 w3-mobile square content w3-teal" >
+
+       <p>Caracteristicas</p>
+      <hr>
+      <img src="img/iconos/ic7.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+      <p>Nuestros servicios son de calidad ecumenica.</p><br>
+ 
+  </div>
+  
+    <div class="w3-col s2 l3 m3 fade8 w3-mobile square content " >
+   
+      <p>Productos</p>
+      <hr>
+      <img src="img/iconos/ic8.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+      <p>La mejor calidad en ataudes y urnas, asi como mejoras y complementos para su servicio.</p><br>
+    
+  </div>
+  
+</div>
+
+<div class="w3-container w3-padding-16">
+    
+    
+</div>
+
+<div class="w3-container w3-blue-gray w3-padding-32 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class=" w3-large">
+    <div class=" w3-center"><h2><span class="w3-bottombar">¡SOMOS TU MEJOR OPCIÓN!</span></h2></div>
+  <br>
+
+    </div>
+    </div>
+  </div>
+
+ <div class="w3-container w3-center w3-teal">
+        <p>Funerales Renacimiento es una marca de CR & Asociados, Todos los derechos reservados <a href="funeralesrenacimiento.com" target="_blank">www.funeralesrenacimiento.com</a></p>
+      
+  </div>
+
+    </div>
+
+<script>
+// Script for side navigation
+function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "300px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("boton").style.display = "block";
+    } else {
+        document.getElementById("boton").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+    
+    
+    
+       $(document).ready(function(){
+        $("#fade").click(function(){
+        $("#div1").fadeToggle();
+   });
+});
+</script>
+
+<script>
+    $(function(){
+  $('.bxslider').bxSlider({
+    mode: 'fade',
+    captions: true,
+    slideWidth: 1280,
+      slideHeight: 853
+  });
+});</script>
+
+<!-- slideshow testimonios -->
+ <script>
+      $(document).ready(function () {
+    //rotation speed and timer
+    var speed = 2500;
+    
+    var run = setInterval(rotate, speed);
+    var slides = $('.slide');
+    var container = $('#slides ul');
+    var elm = container.find(':first-child').prop("tagName");
+    var item_width = container.width();
+    var previous = 'prev'; //id of previous button
+    var next = 'next'; //id of next button
+    slides.width(item_width); //set the slides to the correct pixel width
+    container.parent().width(item_width);
+    container.width(slides.length * item_width); //set the slides container to the correct total width
+    container.find(elm + ':first').before(container.find(elm + ':last'));
+    resetSlides();
+    
+    
+    //if user clicked on prev button
+    
+    $('#buttons a').click(function (e) {
+        //slide the item
+        
+        if (container.is(':animated')) {
+            return false;
+        }
+        if (e.target.id == previous) {
+            container.stop().animate({
+                'left': 0
+            }, 1500, function () {
+                container.find(elm + ':first').before(container.find(elm + ':last'));
+                resetSlides();
+            });
+        }
+        
+        if (e.target.id == next) {
+            container.stop().animate({
+                'left': item_width * -2
+            }, 1500, function () {
+                container.find(elm + ':last').after(container.find(elm + ':first'));
+                resetSlides();
+            });
+        }
+        
+        //cancel the link behavior            
+        return false;
+        
+    });
+    
+    //if mouse hover, pause the auto rotation, otherwise rotate it    
+    container.parent().mouseenter(function () {
+        clearInterval(run);
+    }).mouseleave(function () {
+        run = setInterval(rotate, speed);
+    });
+    
+    
+    function resetSlides() {
+        //and adjust the container so current is in the frame
+        container.css({
+            'left': -1 * item_width
+        });
+    }
+    
+});
+//a simple function to click next link
+//a timer will call this function, and the rotation will begin
+
+function rotate() {
+    $('#next').click();
+}
+      </script>
+
+
+
+
+
+
+</body>
+</html>
